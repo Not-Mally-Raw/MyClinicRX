@@ -17,36 +17,26 @@ const PageContainer = styled.div`
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: #f5f5f7;
+  background: url('https://img.freepik.com/premium-vector/online-medical-consultation-medicine-professional-doctor-connecting-giving-consultation_566886-2040.jpg') no-repeat center center fixed;
+  background-size: cover;
   animation: ${fadeIn} 1s ease-out;
-`;
-
-const HeroSection = styled.section`
   text-align: center;
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
 `;
 
 const HeroTitle = styled.h1`
   font-size: 3rem;
   font-weight: 700;
-  color: #333;
+  color: black;
   margin-bottom: 20px;
+  text-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
 `;
 
 const HeroSubtitle = styled.p`
   font-size: 1.5rem;
   font-weight: 300;
-  color: #666;
+  color: black;
   margin-bottom: 40px;
-`;
-
-const HeroImage = styled.img`
-  width: 100%;
-  max-width: 600px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
 `;
 
 const FeaturesSection = styled.section`
@@ -61,7 +51,7 @@ const Feature = styled.div`
   padding: 20px;
   text-align: center;
   margin: 20px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
@@ -86,11 +76,8 @@ const FeatureDescription = styled.p`
 function HomePage() {
   return (
     <PageContainer>
-      <HeroSection>
-        <HeroTitle>MyClinicRx</HeroTitle>
-        <HeroSubtitle>Medication Management Made Easy</HeroSubtitle>
-        <HeroImage src="https://via.placeholder.com/600x400" alt="Hero" />
-      </HeroSection>
+      <HeroTitle>MyClinicRx</HeroTitle>
+      <HeroSubtitle>Medication Management Made Easy</HeroSubtitle>
       <FeaturesSection>
         <Link to="/inventory" style={{ textDecoration: 'none', color: 'inherit' }}>
           <Feature>
