@@ -1,5 +1,5 @@
-// Import necessary modules
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
 // Define CSS animation
@@ -93,6 +93,20 @@ const RefreshText = styled.a`
 
 // HomePage component
 function HomePage() {
+  const navigate = useNavigate();
+
+  const handleInventoryManagement = () => {
+    navigate('/inventory-management');
+  };
+
+  const handleExpiryTracking = () => {
+    navigate('/expiry-tracking');
+  };
+
+  const handleBookAppointment = () => {
+    navigate('/book-appointment');
+  };
+
   const refreshPage = () => {
     window.location.reload(); // Reload the current page
   };
@@ -102,19 +116,19 @@ function HomePage() {
       <HeroTitle>MyClinicRx</HeroTitle>
       <HeroSubtitle>Medication Management Made Easy</HeroSubtitle>
       <FeaturesSection>
-        <Feature>
+        <Feature onClick={handleInventoryManagement}>
           <FeatureTitle>Inventory Management</FeatureTitle>
           <FeatureDescription>
             Easily add, update, and remove medications, including details like patient history, medicine name, dosage, quantity, and expiry date.
           </FeatureDescription>
         </Feature>
-        <Feature>
+        <Feature onClick={handleExpiryTracking}>
           <FeatureTitle>Expiry Tracking</FeatureTitle>
           <FeatureDescription>
             Automatically calculates and lists medications nearing expiry.
           </FeatureDescription>
         </Feature>
-        <Feature>
+        <Feature onClick={handleBookAppointment}>
           <FeatureTitle>Book Appointment</FeatureTitle>
           <FeatureDescription>
             Schedule appointments with ease.
