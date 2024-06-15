@@ -6,7 +6,7 @@ MyClinicRx is a web app designed to help clinics efficiently track medication ex
 ## Key Features
 - **Inventory Management**: Easily add, update, and remove medications, including details like patient history, medicine name, dosage, quantity, and expiry date.
 - **Expiry Tracking**: Automatically calculates and lists medications nearing expiry.
-- **Alert System**: Customizable notifications for approaching expiry dates.
+- **Book Appointment**: Schedule appointments with ease, ensuring better patient management and clinic workflow.
 - **Reporting & Analytics**: Generate reports on expired medications to optimize inventory management.
 - **User Management**: Assign roles and permissions to ensure secure access.
 - **System Integration**: Seamlessly integrate with existing clinic management systems.
