@@ -1,0 +1,147 @@
+/* src/components/SignInForm.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f0f4f8;
+}
+
+.login-content {
+  display: flex;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 900px;
+  height: 600px;
+}
+
+.login-info {
+  background: linear-gradient(to bottom, #4facfe, #00f2fe);
+  padding: 2rem;
+  color: white;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.login-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.login-info ul li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.login-form {
+  padding: 2rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.user-toggle {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.user-type {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #777;
+}
+
+.user-type.active {
+  font-weight: bold;
+  color: #00bfa6;
+}
+
+.login-form h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.login-form p {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.login-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.login-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  background: #00bfa6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+  background-color: #009f8e;
+}
+
+.login-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.login-footer a {
+  color: #00bfa6;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.login-container {
+  position: relative; /* Add this line */
+}
+
+/* New styles for copyright */
+.copyright {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.7rem; /* Adjust the font size as needed */
+  color: #777;
+}
