@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+// Styled component for the main container with background image and centering
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -12,6 +13,7 @@ const Container = styled.div`
   height: 100vh;
 `;
 
+// Styled component for the form container with translucent background and blur effect
 const FormContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -22,16 +24,19 @@ const FormContainer = styled.div`
   backdrop-filter: blur(10px); /* Apply blur effect */
 `;
 
+// Styled component for the form layout
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   width: 300px;
 `;
 
+// Styled component for the form labels
 const Label = styled.label`
   margin-bottom: 10px;
 `;
 
+// Styled component for the form inputs
 const Input = styled.input`
   padding: 8px;
   margin-bottom: 20px;
@@ -40,6 +45,7 @@ const Input = styled.input`
   box-sizing: border-box;
 `;
 
+// Styled component for the form submit button
 const Button = styled.button`
   padding: 10px 20px;
   background-color: #007bff;
@@ -53,6 +59,8 @@ const Button = styled.button`
     background-color: #0056b3;
   }
 `;
+
+// Styled component for the appointment list
 const AppointmentList = styled.ul`
   list-style-type: none;
   padding: 0;
@@ -60,6 +68,7 @@ const AppointmentList = styled.ul`
   width: 300px;
 `;
 
+// Styled component for each appointment item in the list
 const AppointmentItem = styled.li`
   background-color: #f9f9f9;
   padding: 10px;
@@ -68,16 +77,24 @@ const AppointmentItem = styled.li`
 `;
 
 const BookAppointmentComponent = () => {
+  // State to store all booked appointments
   const [appointments, setAppointments] = useState({});
+  // State to store the patient's name input
   const [patientName, setPatientName] = useState("");
+  // State to store the appointment date input
   const [date, setDate] = useState("");
+  // State to store the appointment time input
   const [time, setTime] = useState("");
 
+  // Function to book an appointment
   const bookAppointment = (patientName, date, time) => {
+    // Create a unique key for the appointment based on date and time
     const appointmentKey = `${date}_${time}`;
+    // Check if the appointment slot is already booked
     if (appointments[appointmentKey]) {
       alert("Sorry, this appointment slot is already booked.");
     } else {
+      // Update the state with the new appointment
       setAppointments({
         ...appointments,
         [appointmentKey]: patientName,
@@ -86,14 +103,18 @@ const BookAppointmentComponent = () => {
     }
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
+    // Prevent default form submission behavior
     e.preventDefault();
+    // Call the bookAppointment function with current state values
     bookAppointment(patientName, date, time);
   };
 
   return (
     <Container>
       <FormContainer>
+        {/* Form for booking appointments */}
         <Form onSubmit={handleSubmit}>
           <Label>Patient Name:</Label>
           <Input
@@ -118,6 +139,7 @@ const BookAppointmentComponent = () => {
           />
           <Button type="submit">Book Appointment</Button>
         </Form>
+        {/* Display the list of current appointments */}
         <h2 style={{ textAlign: "center", marginTop: "20px" }}>
           Current Appointments
         </h2>
