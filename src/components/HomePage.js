@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 
-// Define CSS animation
+// Define CSS animation for fading in elements
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -12,7 +12,7 @@ const fadeIn = keyframes`
   }
 `;
 
-// Styled components for homepage elements
+// Styled component for the page container
 const PageContainer = styled.div`
   position: relative;
   display: flex;
@@ -26,6 +26,7 @@ const PageContainer = styled.div`
   text-align: center;
 `;
 
+// Styled component for the main title
 const HeroTitle = styled.h1`
   font-size: 3rem;
   font-weight: 700;
@@ -34,6 +35,7 @@ const HeroTitle = styled.h1`
   text-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
 `;
 
+// Styled component for the subtitle
 const HeroSubtitle = styled.p`
   font-size: 1.5rem;
   font-weight: 300;
@@ -42,6 +44,7 @@ const HeroSubtitle = styled.p`
   text-shadow: 0 4px 6px rgba(255, 255, 255, 0.3);
 `;
 
+// Styled component for the features section
 const FeaturesSection = styled.section`
   display: flex;
   flex-wrap: wrap;
@@ -49,6 +52,7 @@ const FeaturesSection = styled.section`
   margin: 50px 0;
 `;
 
+// Styled component for individual features
 const Feature = styled.div`
   flex: 1 1 300px;
   padding: 20px;
@@ -65,17 +69,20 @@ const Feature = styled.div`
   }
 `;
 
+// Styled component for the feature title
 const FeatureTitle = styled.h2`
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 10px;
 `;
 
+// Styled component for the feature description
 const FeatureDescription = styled.p`
   font-size: 1rem;
   color: #666;
 `;
 
+// Styled component for the refresh text (sign out link)
 const RefreshText = styled.a`
   position: absolute;
   top: 20px;
@@ -95,18 +102,22 @@ const RefreshText = styled.a`
 function HomePage() {
   const navigate = useNavigate();
 
+  // Handler for navigating to inventory management page
   const handleInventoryManagement = () => {
     navigate('/inventory-management');
   };
 
+  // Handler for navigating to expiry tracking page
   const handleExpiryTracking = () => {
     navigate('/expiry-tracking');
   };
 
+  // Handler for navigating to book appointment page
   const handleBookAppointment = () => {
     navigate('/book-appointment');
   };
 
+  // Handler for refreshing the page
   const refreshPage = () => {
     window.location.reload(); // Reload the current page
   };
