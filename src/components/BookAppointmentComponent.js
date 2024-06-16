@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: url('https://img.freepik.com/free-vector/appointment-booking-landing-page_23-2148564513.jpg') no-repeat center center fixed;
+  background: url("https://t3.ftcdn.net/jpg/02/60/79/68/360_F_260796882_QyjDubhDDk0RZXV9z7XBEw9AKnWCizXy.jpg")
+    no-repeat center center fixed;
   background-size: cover;
   height: 100vh;
 `;
@@ -68,9 +69,9 @@ const AppointmentItem = styled.li`
 
 const BookAppointmentComponent = () => {
   const [appointments, setAppointments] = useState({});
-  const [patientName, setPatientName] = useState('');
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
+  const [patientName, setPatientName] = useState("");
+  const [date, setDate] = useState("");
+  const [time, setTime] = useState("");
 
   const bookAppointment = (patientName, date, time) => {
     const appointmentKey = `${date}_${time}`;
@@ -79,7 +80,7 @@ const BookAppointmentComponent = () => {
     } else {
       setAppointments({
         ...appointments,
-        [appointmentKey]: patientName
+        [appointmentKey]: patientName,
       });
       alert("Appointment booked successfully!");
     }
@@ -117,11 +118,13 @@ const BookAppointmentComponent = () => {
           />
           <Button type="submit">Book Appointment</Button>
         </Form>
-        <h2 style={{ textAlign: 'center', marginTop: '20px' }}>Current Appointments</h2>
+        <h2 style={{ textAlign: "center", marginTop: "20px" }}>
+          Current Appointments
+        </h2>
         <AppointmentList>
           {Object.keys(appointments).map((key) => (
             <AppointmentItem key={key}>
-              {key.replace('_', ' at ')} - {appointments[key]}
+              {key.replace("_", " at ")} - {appointments[key]}
             </AppointmentItem>
           ))}
         </AppointmentList>
