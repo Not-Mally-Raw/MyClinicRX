@@ -1,12 +1,14 @@
-/* src/components/SignInForm.css */
+/* Container for the entire login component, centered with flexbox */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background: #f0f4f8;
+  position: relative; /* Added to position the copyright text */
 }
 
+/* Container for login content, including shadow and rounded corners */
 .login-content {
   display: flex;
   background: white;
@@ -17,6 +19,7 @@
   height: 600px;
 }
 
+/* Styling for the informational section of the login component */
 .login-info {
   background: linear-gradient(to bottom, #4facfe, #00f2fe);
   padding: 2rem;
@@ -27,21 +30,25 @@
   justify-content: center;
 }
 
+/* Header in the informational section */
 .login-info h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
+/* Removing default list styling for the info list */
 .login-info ul {
   list-style: none;
   padding: 0;
 }
 
+/* List items in the informational section */
 .login-info ul li {
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
+/* Styling for the form section of the login component */
 .login-form {
   padding: 2rem;
   width: 50%;
@@ -51,12 +58,14 @@
   text-align: left;
 }
 
+/* Container for user type toggle buttons */
 .user-toggle {
   display: flex;
   justify-content: space-around;
   margin-bottom: 1rem;
 }
 
+/* Styling for the user type buttons */
 .user-type {
   background: none;
   border: none;
@@ -65,28 +74,33 @@
   color: #777;
 }
 
+/* Styling for the active user type button */
 .user-type.active {
   font-weight: bold;
   color: #00bfa6;
 }
 
+/* Header in the form section */
 .login-form h2 {
   font-size: 1.5rem;
   color: #333;
   margin-bottom: 0.5rem;
 }
 
+/* Paragraphs in the form section */
 .login-form p {
   font-size: 1rem;
   color: #777;
   margin-bottom: 1rem;
 }
 
+/* Form element styling */
 .login-form form {
   display: flex;
   flex-direction: column;
 }
 
+/* Input fields in the form */
 .login-form input {
   padding: 0.75rem;
   font-size: 1rem;
@@ -95,6 +109,7 @@
   margin-bottom: 1rem;
 }
 
+/* Submit button styling */
 .login-form button {
   padding: 0.75rem;
   font-size: 1rem;
@@ -106,10 +121,12 @@
   transition: background-color 0.3s;
 }
 
+/* Hover effect for the submit button */
 .login-form button:hover {
   background-color: #009f8e;
 }
 
+/* Footer section in the form for additional links */
 .login-footer {
   display: flex;
   justify-content: space-between;
@@ -117,12 +134,14 @@
   margin-top: 1rem;
 }
 
+/* Links in the footer */
 .login-footer a {
   color: #00bfa6;
   text-decoration: none;
   font-size: 0.9rem;
 }
 
+/* Back button styling */
 .back-button {
   background: none;
   border: none;
@@ -132,16 +151,12 @@
   margin-bottom: 2rem;
 }
 
-.login-container {
-  position: relative; /* Add this line */
-}
-
-/* New styles for copyright */
+/* Styling for the copyright text */
 .copyright {
   position: absolute;
-  bottom: 20px; /* Adjust as needed */
+  bottom: 20px; /* Positioned at the bottom of the container */
   left: 50%;
-  transform: translateX(-50%);
-  font-size: 0.7rem; /* Adjust the font size as needed */
+  transform: translateX(-50%); /* Centered horizontally */
+  font-size: 0.7rem; /* Smaller font size */
   color: #ee4b2b;
 }

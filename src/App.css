@@ -1,39 +1,45 @@
-/* src/App.css */
+/* Container for the entire application, centering text by default */
 .app-container {
   text-align: center;
 }
 
+/* Header section of the application with a black background and white text */
 .app-header {
   background-color: #000;
   color: white;
   padding: 1rem;
 }
 
+/* Navigation list styling, removing default list style and setting up flexbox */
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1rem; /* Space between navigation items */
   justify-content: center;
   padding: 0;
 }
 
+/* Each list item in the navigation */
 .nav-list li {
   display: inline;
 }
 
+/* Styling for navigation links, with white text and no underline */
 .nav-list a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
-  padding: 0.5rem 1rem;
-  transition: background-color 0.3s ease;
+  padding: 0.5rem 1rem; /* Padding around the link text */
+  transition: background-color 0.3s ease; /* Smooth transition for background color change */
 }
 
+/* Hover effect for navigation links, changing background color and adding border radius */
 .nav-list a:hover {
   background-color: #333;
   border-radius: 5px;
 }
 
+/* Main content area padding */
 .main {
   padding: 2rem;
 }
